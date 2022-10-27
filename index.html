@@ -26,12 +26,12 @@
         </a>
         <ul class="header-nav list">
           <li class="item">
-            <a href="./index.html" class="link current">Студія</a>
+            <a href="./index.html" class="link nav-link current">Студія</a>
           </li>
           <li class="item">
-            <a href="./porfolio.html" class="link">Портфоліо</a>
+            <a href="./porfolio.html" class="link nav-link">Портфоліо</a>
           </li>
-          <li class="item"><a href="#" class="link">Контакти</a></li>
+          <li class="item"><a href="#" class="link nav-link">Контакти</a></li>
         </ul>
 
         <ul class="header-contacts list">
@@ -59,7 +59,19 @@
     <main>
       <section class="hero">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="hero-button" type="button">Замовити послугу</button>
+        <button class="hero-button" type="button" data-modal-open>
+          Замовити послугу
+        </button>
+
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="close-button" data-modal-close>
+              <svg class="close-icon" width="11px" height="11px">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
 
       <section class="section benefit-section">
@@ -122,21 +134,36 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="work-list list">
             <li class="item">
-              <img src="images/box1.jpg" alt="Людина, яка друкує" width="370" />
+              <div class="work-item-container">
+                <img
+                  src="images/box1.jpg"
+                  alt="Людина, яка друкує"
+                  width="370"
+                />
+                <p class="work-text-top">Десктопні додатки</p>
+              </div>
             </li>
             <li class="item">
-              <img
-                src="images/box2.jpg"
-                alt="Людина, яка працює з смартфоном та за ноубуком"
-                width="370"
-              />
+              <div class="work-item-container">
+                <img
+                  src="images/box2.jpg"
+                  alt="Людина, яка працює з смартфоном та за ноубуком"
+                  width="370"
+                />
+                <p class="work-text-top">Мобільні додатки</p>
+              </div>
             </li>
             <li class="item">
-              <img
-                src="images/box3.jpg"
-                alt="Людина, яка працює з графічним планшетом"
-                width="370"
-              />
+              <div class="work-item-container">
+                <img
+                  src="images/box3.jpg"
+                  alt="Людина, яка працює з графічним планшетом"
+                  width="370"
+                />
+                <p class="work-text-top">
+                  Дизайнерські рішення
+                </p>
+              </div>
             </li>
           </ul>
         </div>
@@ -432,5 +459,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
